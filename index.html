@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 - Blog Website</title>
+    <!-- Bootsrap 5 CDN-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- font-awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"/>
+
+    <!-- Own CSS Link -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive-style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0"> 
+    <!-- Header Starts -->
+    <nav class="navbar navbar-expand-lg navigation-wrap">
+        <div class="container">
+            <a class="navbar-brand logo" href="#">Foodiee</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home" onclick="setActive(this)">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#food-blog" onclick="setActive(this)">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about" onclick="setActive(this)">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact" onclick="setActive(this)">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <!-- Banner Starts -->
+    <section id="home">
+      <div class="container-fluid px-0 top-banner">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5 col-md-6">
+              <h1>Discover Flavors. Create Memories.</h1>
+              <p>Explore easy, delicious recipes crafted with love. From quick breakfasts to rich Indian curries and indulgent desserts, we bring food inspiration straight to your kitchen.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Recipes Section starts -->
+    <section id="food-blog">
+      <div class="food-blog wrapper">
+        <div class="container">
+          <!-- Recipe header -->
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="headline text-content text-center">
+                <h2 class="position-relative pb-3 mb-4 d-inline-block">Latest Recipes</h2>
+                <p class="mb-4">Browse our handpicked recipes — from comforting Indian classics to delightful desserts. Each dish is simple, delicious, and easy to recreate at home.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Search Recipe -->
+          <div class="row">
+            <div class="search-bar text-center mb-4">
+              <input type="text" id="searchInput" placeholder="Search recipes..." />
+              <button onclick="searchRecipes()">Search</button>
+            </div>
+          </div>
+          <!-- Recipe buttons -->
+          <div class="row">
+            <div class="col-lg-12 text-content text-center">
+              <button onclick="filterFood('all')" class="categories-btn">All</button>
+              <button onclick="filterFood('breakfast')" class="categories-btn">Breakfast</button>
+              <button onclick="filterFood('mains')" class="categories-btn">Mains</button>
+              <button onclick="filterFood('desserts')" class="categories-btn">Dessert</button>
+            </div>
+          </div>
+          <!-- Cards start here -->
+          <div class="row">
+            <!-- card 1 -->
+            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+              <div class="card breakfast">
+                  <div class="image-container">
+                    <img src="images/breakfast/Avocado Toast with Poached Egg.avif" class="img-fluid" alt="Avocado Toast with Poached Egg">
+                    <span class="label">Breakfast</span>
+                  </div>
+                  <div class="pt-3">
+                  <h4>Avocado Toast with Poached Egg</h4>
+                  <time datetime="2025-08-15">Published: August 15, 2025</time>
+                  <p class="food-para pt-2">Creamy avocado on crispy toast topped with a soft poached egg — healthy, and delicious.</p>
+                  <p><i class="fa-solid fa-alarm-clock"></i> 15 - 20 Minutes | <i class="fa-solid fa-user-group"></i> Serves 1</p>
+                  <div class="profile d-flex align-items-center gap-2">
+                    <img src="images/chef 4.avif" alt="Profile Image" class="profile-img">
+                    <span class="profile-name">Alex Harper</span>
+                  </div>
+                  <div class="d-flex mt-4 gap-2">
+                    <button class="main-btn" onclick="showRecipe(1)">View Recipe</button>
+                    <button class="comment-btn btn btn-outline-primary" data-post-id="post1">Leave a Comment</button>
+                  </div>  
+                </div>
+              </div>
+            </div>
+
+            <!-- card 2 -->
+            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+              <div class="card desserts">
+                <div class="image-container">
+                  <img src="images/Desserts/Chocolate Lava Cake.avif" class="img-fluid" alt="Chocolate Lava Cake">
+                    <span class="label">Desserts</span>
+                </div>
+                <div class="pt-3">
+                  <h4>Chocolate Lava Cake</h4>
+                  <time datetime="2025-08-03">Published: August 03, 2025</time>
+                  <p class="food-para pt-2">Soft chocolate cake with a gooey molten center, served warm with ice cream for indulgence.</p>
+                  <p><i class="fa-solid fa-alarm-clock"></i> 30 - 40 Minutes | <i class="fa-solid fa-user-group"></i> Serves 3</p>
+                  <div class="profile d-flex align-items-center gap-2">
+                    <img src="images/chef 1.avif" alt="Profile Image" class="profile-img">
+                    <span class="profile-name">Sam Carter</span>
+                  </div>
+                  <div class="d-flex mt-4 gap-2">
+                    <button class="main-btn" onclick="showRecipe(2)">View Recipe</button>
+                    <button class="comment-btn btn btn-outline-primary" data-post-id="post3">Leave a Comment</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 3 -->
+            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+              <div class="card mains">
+                <div class="image-container">
+                  <img src="images/mains/Stuffed Capsicum.jpg" class="img-fluid" alt="Stuffed Capsicum">
+                    <span class="label">Mains</span>
+                </div>
+                <div class="pt-3">
+                  <h4>Stuffed Capsicum</h4>
+                  <time datetime="2025-06-04">Published: June 06, 2025</time>
+                  <p class="food-para pt-2">Bell peppers filled with spiced potato and peas mixture, roasted until golden and flavorful.</p>
+                  <p><i class="fa-solid fa-alarm-clock"></i> 40 Minutes | <i class="fa-solid fa-user-group"></i> Serves 2</p>
+                  <div class="profile d-flex align-items-center gap-2">
+                    <img src="images/chef 3.avif" alt="Profile Image" class="profile-img">
+                    <span class="profile-name">Taste by Ronny</span>
+                  </div>
+                  <div class="d-flex mt-4 gap-2">
+                    <button class="main-btn" onclick="showRecipe(3)">View Recipe</button>
+                    <button class="comment-btn btn btn-outline-primary" data-post-id="post3">Leave a Comment</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 4 -->
+            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+              <div class="card mains">
+                <div class="image-container">
+                  <img src="images/mains/Paneer Butter Masala.avif" class="img-fluid" alt="Paneer Butter Masala">
+                    <span class="label">Mains</span>
+                </div>
+                <div class="pt-3">
+                  <h4>Paneer Butter Masala</h4>
+                  <time datetime="2025-08-26">Published: August 26, 2025</time>
+                  <p class="food-para pt-2">A creamy, rich curry made with soft paneer cubes simmered in a buttery tomato gravy.</p>
+                  <p><i class="fa-solid fa-alarm-clock"></i> 30 - 40 Minutes | <i class="fa-solid fa-user-group"></i> Serves 2</p>
+                  <div class="profile d-flex align-items-center gap-2">
+                    <img src="images/chef 1.avif" alt="Profile Image" class="profile-img">
+                    <span class="profile-name">Flavor Tales</span>
+                  </div>
+                  <div class="d-flex mt-4 gap-2">
+                    <button class="main-btn" onclick="showRecipe(4)">View Recipe</button>
+                    <button class="comment-btn btn btn-outline-primary" data-post-id="post3">Leave a Comment</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- card 5 -->
+            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+              <div class="card breakfast">
+                  <div class="image-container">
+                    <img src="images/breakfast/Masala Dosa.avif" class="img-fluid" alt="Masala Dosa">
+                    <span class="label">Breakfast</span>
+                  </div>
+                  <div class="pt-3">
+                  <h4>Masala Dosa</h4>
+                  <time datetime="2025-08-09">Published: August 08, 2025</time>
+                  <p class="food-para pt-2">Crispy rice-lentil crepe filled with spiced potato masala, served with chutney and sambar.</p>
+                  <p><i class="fa-solid fa-alarm-clock"></i> 25 - 30 Minutes | <i class="fa-solid fa-user-group"></i> Serves 2</p>
+                  <div class="profile d-flex align-items-center gap-2">
+                    <img src="images/chef 4.avif" alt="Profile Image" class="profile-img">
+                    <span class="profile-name">Ronny's Kitchen</span>
+                  </div>
+                  <div class="d-flex mt-4 gap-2">
+                    <button class="main-btn" onclick="showRecipe(5)">View Recipe</button>
+                    <button class="comment-btn btn btn-outline-primary" data-post-id="post1">Leave a Comment</button>
+                  </div>  
+                </div>
+              </div>
+            </div>
+
+            <!-- card 6 -->
+            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+              <div class="card breakfast">
+                <div class="image-container">
+                  <img src="images/breakfast/Classic Pancakes.avif" class="img-fluid" alt="Classic Pancakes">
+                    <span class="label">Breakfast</span>
+                </div>
+                <div class="pt-3">
+                  <h4>Classic Pancakes</h4>
+                  <time datetime="2025-08-10">Published: August 10, 2025</time>
+                  <p class="food-para pt-2">Fluffy golden pancakes drizzled with maple syrup and a pat of butter.</p>
+                  <p><i class="fa-solid fa-alarm-clock"></i> 15 - 20 Minutes | <i class="fa-solid fa-user-group"></i> Serves 2</p>
+                  <div class="profile d-flex align-items-center gap-2">
+                    <img src="images/chef 2.avif" alt="Profile Image" class="profile-img">
+                    <span class="profile-name">Ronny Doe</span>
+                  </div>
+                  <div class="d-flex mt-4 gap-2">
+                    <button class="main-btn" onclick="showRecipe(6)">View Recipe</button>
+                    <button class="comment-btn btn btn-outline-primary" data-post-id="post2">Leave a Comment</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 7 -->
+            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+              <div class="card desserts">
+                <div class="image-container">
+                  <img src="images/Desserts/Brownie Sundae.avif" class="img-fluid" alt="Brownie Sundae">
+                    <span class="label">Desserts</span>
+                </div>
+                <div class="pt-3">
+                  <h4>Brownie Sundae</h4>
+                  <time datetime="2025-06-11">Published: June 11, 2025</time>
+                  <p class="food-para pt-2">Fudgy brownies topped with ice cream, chocolate sauce, and crunchy nuts.</p>
+                  <p><i class="fa-solid fa-alarm-clock"></i> 45 Minutes | <i class="fa-solid fa-user-group"></i> Serves 2</p>
+                  <div class="profile d-flex align-items-center gap-2">
+                    <img src="images/chef 4.avif" alt="Profile Image" class="profile-img">
+                    <span class="profile-name">Jamie Cook</span>
+                  </div>
+                  <div class="d-flex mt-4 gap-2">
+                    <button class="main-btn" onclick="showRecipe(7)">View Recipe</button>
+                    <button class="comment-btn btn btn-outline-primary" data-post-id="post3">Leave a Comment</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- card 8 -->
+            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+              <div class="card breakfast">
+                <div class="image-container">
+                  <img src="images/breakfast/Rainbow Vegetable Sandwich.avif" class="img-fluid" alt="Rainbow Vegetable Sandwich">
+                    <span class="label">Breakfast</span>
+                </div>
+                <div class="pt-3">
+                  <h4>Rainbow Vegetable Sandwich</h4>
+                  <time datetime="2025-06-15">Published: June 06, 2025</time>
+                  <p class="food-para pt-2">Colorful layers of crunchy vegetables and spreads packed between soft bread slices.</p>
+                  <p><i class="fa-solid fa-alarm-clock"></i> 15 - 20 Min | <i class="fa-solid fa-user-group"></i> Serves 1</p>
+                  <div class="profile d-flex align-items-center gap-2">
+                    <img src="images/chef 5.avif" alt="Profile Image" class="profile-img">
+                    <span class="profile-name">The Food Explorer</span>
+                  </div>
+                  <div class="d-flex mt-4 gap-2">
+                    <button class="main-btn" onclick="showRecipe(8)">View Recipe</button>
+                    <button class="comment-btn btn btn-outline-primary" data-post-id="post2">Leave a Comment</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- card 9 -->
+            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+              <div class="card desserts">
+                <div class="image-container">
+                  <img src="images/Desserts/Mango Cheesecake.avif" class="img-fluid" alt="Mango Cheesecake">
+                    <span class="label">Desserts</span>
+                </div>
+                <div class="pt-3">
+                  <h4>Mango Cheesecake</h4>
+                  <time datetime="2025-08-17">Published: August 17, 2025</time>
+                  <p class="food-para pt-2">A no-bake cheesecake topped with fresh mango puree, creamy and tropical.</p>
+                  <p><i class="fa-solid fa-alarm-clock"></i> 45 Minutes | <i class="fa-solid fa-user-group"></i> Serves 4</p>
+                  <div class="profile d-flex align-items-center gap-2">
+                    <img src="images/chef 3.avif" alt="Profile Image" class="profile-img">
+                    <span class="profile-name">Alex Harper</span>
+                  </div>
+                  <div class="d-flex mt-4 gap-2">
+                    <button class="main-btn" onclick="showRecipe(9)">View Recipe</button>
+                    <button class="comment-btn btn btn-outline-primary" data-post-id="post3">Leave a Comment</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- card 10 -->
+            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+              <div class="card breakfast">
+                <div class="image-container">
+                  <img src="images/breakfast/vegetable Upma.jpg" class="img-fluid" alt="vegetable Upma">
+                    <span class="label">Breakfast</span>
+                </div>
+                <div class="pt-3">
+                  <h4>Vegetable Upma</h4>
+                  <time datetime="2025-07-01">Published: July 01, 2025</time>
+                  <p class="food-para pt-2">A wholesome South Indian breakfast made with semolina, veggies, and mild spices.</p>
+                  <p><i class="fa-solid fa-alarm-clock"></i> 20 Minutes | <i class="fa-solid fa-user-group"></i> Serves 1</p>
+                  <div class="profile d-flex align-items-center gap-2">
+                    <img src="images/chef 3.avif" alt="Profile Image" class="profile-img">
+                    <span class="profile-name">Jamie Cook</span>
+                  </div>
+                  <div class="d-flex mt-4 gap-2">
+                    <button class="main-btn" onclick="showRecipe(10)">View Recipe</button>
+                    <button class="comment-btn btn btn-outline-primary" data-post-id="post3">Leave a Comment</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- card 11 -->
+            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+              <div class="card mains">
+                <div class="image-container">
+                  <img src="images/mains/Vegetable Biryani.jpg" class="img-fluid" alt="Vegetable Biryani">
+                    <span class="label">Mains</span>
+                </div>
+                <div class="pt-3">
+                  <h4>Vegetable Biryani</h4>
+                  <time datetime="2025-07-13">Published: July 13, 2025</time>
+                  <p class="food-para pt-2">A creamy, rich curry made with soft paneer cubes simmered in a buttery tomato gravy.</p>
+                  <p><i class="fa-solid fa-alarm-clock"></i> 45 - 60 Minutes | <i class="fa-solid fa-user-group"></i> Serves 3</p>
+                  <div class="profile d-flex align-items-center gap-2">
+                    <img src="images/chef 2.avif" alt="Profile Image" class="profile-img">
+                    <span class="profile-name">Spice & Spoon</span>
+                  </div>
+                  <div class="d-flex mt-4 gap-2">
+                    <button class="main-btn" onclick="showRecipe(11)">View Recipe</button>
+                    <button class="comment-btn btn btn-outline-primary" data-post-id="post3">Leave a Comment</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- card 12 -->
+            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+              <div class="card desserts">
+                <div class="image-container">
+                  <img src="images/Desserts/Gulab Jamun.jpg" class="img-fluid" alt="Gulab Jamun">
+                    <span class="label">Desserts</span>
+                </div>
+                <div class="pt-3">
+                  <h4>Gulab Jamun</h4>
+                  <time datetime="2025-06-27">Published: June 27, 2025</time>
+                  <p class="food-para pt-2">Deep-fried khoya balls soaked in sugar syrup, a festive Indian classic.</p>
+                  <p><i class="fa-solid fa-alarm-clock"></i> 25 Minutes | <i class="fa-solid fa-user-group"></i> Serves 3</p>
+                  <div class="profile d-flex align-items-center gap-2">
+                    <img src="images/chef 5.avif" alt="Profile Image" class="profile-img">
+                    <span class="profile-name">Chef's Palette</span>
+                  </div>
+                  <div class="d-flex mt-4 gap-2">
+                    <button class="main-btn" onclick="showRecipe(12)">View Recipe</button>
+                    <button class="comment-btn btn btn-outline-primary" data-post-id="post3">Leave a Comment</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- card 13 -->
+            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+              <div class="card mains">
+                <div class="image-container">
+                  <img src="images/mains/Palak Paneer.avif" class="img-fluid" alt="Palak Paneer">
+                    <span class="label">Mains</span>
+                </div>
+                <div class="pt-3">
+                  <h4>Palak Paneer</h4>
+                  <time datetime="2025-08-28">Published: August 28, 2025</time>
+                  <p class="food-para pt-2">Fresh spinach puree cooked with aromatic spices and paneer cubes, a healthy yet tasty option.</p>
+                  <p><i class="fa-solid fa-alarm-clock"></i> 30 Minutes | <i class="fa-solid fa-user-group"></i> Serves 2</p>
+                  <div class="profile d-flex align-items-center gap-2">
+                    <img src="images/chef 4.avif" alt="Profile Image" class="profile-img">
+                    <span class="profile-name">The Hungry Fork</span>
+                  </div>
+                  <div class="d-flex mt-4 gap-2">
+                    <button class="main-btn" onclick="showRecipe(13)">View Recipe</button>
+                    <button class="comment-btn btn btn-outline-primary" data-post-id="post3">Leave a Comment</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- card 14 -->
+            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+              <div class="card desserts">
+                <div class="image-container">
+                  <img src="images/Desserts/Tiramisu.avif" class="img-fluid" alt="Tiramisu">
+                    <span class="label">Desserts</span>
+                </div>
+                <div class="pt-3">
+                  <h4>Tiramisu</h4>
+                  <time class="" datetime="2025-06-09">Published: June 09, 2025</time>
+                  <p class="food-para pt-2">A creamy Italian dessert layered with coffee-soaked ladyfingers and mascarpone.</p>
+                  <p><i class="fa-solid fa-alarm-clock"></i> 30 Minutes + chill | <i class="fa-solid fa-user-group"></i> Serves 4</p>
+                  <div class="profile d-flex align-items-center gap-2">
+                    <img src="images/chef 2.avif" alt="Profile Image" class="profile-img">
+                    <span class="profile-name">Chris Lane</span>
+                  </div>
+                  <div class="d-flex mt-4 gap-2">
+                    <button class="main-btn" onclick="showRecipe(14)">View Recipe</button>
+                    <button class="comment-btn btn btn-outline-primary" data-post-id="post3">Leave a Comment</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- card 15 -->
+            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+              <div class="card mains">
+                <div class="image-container">
+                  <img src="images/mains/Dal Makhani.jpg" class="img-fluid" alt="Dal Makhani">
+                    <span class="label">Mains</span>
+                </div>
+                <div class="pt-3">
+                  <h4>Dal Makhani</h4>
+                  <time datetime="2025-08-15">Published: August 22, 2025</time>
+                  <p class="food-para pt-2">A rich and buttery lentil curry slow-cooked with spices and cream.</p>
+                  <p><i class="fa-solid fa-alarm-clock"></i> 50 Minutes | <i class="fa-solid fa-user-group"></i> Serves 3</p>
+                  <div class="profile d-flex align-items-center gap-2">
+                    <img src="images/chef 5.avif" alt="Profile Image" class="profile-img">
+                    <span class="profile-name">Chef Ronny</span>
+                  </div>
+                  <div class="d-flex mt-4 gap-2">
+                    <button class="main-btn" onclick="showRecipe(15)">View Recipe</button>
+                    <button class="comment-btn btn btn-outline-primary" data-post-id="post3">Leave a Comment</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comment Modal -->
+      <div class="modal fade" id="commentModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Leave a Comment</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <form id="commentForm">
+                <input type="hidden" id="currentPostId">
+                <div class="mb-3">
+                  <input type="text" id="commentName" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                  <textarea id="commentText" class="form-control" rows="3" placeholder="Your Comment" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Post Comment</button>
+              </form>
+              <hr>
+              <div id="commentsList"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recipe Modal -->
+      <div class="modal fade" id="recipeModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content p-3 shadow-lg rounded-4">
+            <div class="modal-header border-0">
+              <h4 class="modal-title" id="recipeTitle"></h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <img id="recipeImage" src="" class="img-fluid mb-3 modal-img" alt="Recipe Image">
+              <div class="ingredients-box">
+                <h6>🥗 Ingredients</h6>
+                <ul id="recipeIngredients"></ul>
+              </div>
+              <div class="instructions-box">
+                <h6>👩‍🍳 Instructions</h6>
+                <ol id="recipeInstructions"></ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section starts -->
+    <section id="about">
+      <div class="about wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="headline text-content text-center">
+                <h2 class="position-relative pb-3 mb-4 d-inline-block">About Foodiee</h2>
+                <p >At Foodiee, we believe food is more than just taste — it's an experience. Our passion is to share simple yet delightful recipes that bring families and friends together at the table.</p>
+              </div>
+            </div>
+          </div>
+          <div class="collage-flex">
+            <!-- Left image -->
+            <div class="left-img">
+              <img src="https://plus.unsplash.com/premium_photo-1705686155055-269efeedeb82?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+            <!-- Middle images -->
+            <div class="middle-img">
+              <div class="middle-top">
+                <img src="https://images.unsplash.com/photo-1567529800628-99c57135862d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+              </div>
+              <div class="middle-bottom col-sm-12">
+                <img src="https://plus.unsplash.com/premium_photo-1663127118994-9cfc009ad332?q=80&w=1137&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+              </div>
+            </div>
+            <!-- Right image -->
+            <div class="right-img">
+              <img src="https://plus.unsplash.com/premium_photo-1669559809547-6e4c4fe41371?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section starts -->
+    <section id="contact">
+      <div class="contact wrapper">
+        <div class="container">
+          <div class="headline mb-5 text-center">
+            <h2 class="position-relative pb-3 d-inline-block">Contact Us</h2>
+          </div>
+          <div class="row">
+            <!-- Contact Info -->
+            <div class="col-lg-5 col-md-5">
+              <h3 class="fw-bold">Contact Info</h3>
+              <ul class="info list-unstyled">
+                <li class="d-flex align-items-center">
+                  <i class="pe-5 fa-solid fa-location-dot fs-5 pb-3"></i>
+                  <p><a href="">Lorem ipsum dolor sit amet, consectetur.</a></p>
+                </li>
+                <li class="d-flex align-items-center">
+                  <i class="pe-5 fa-solid fa-mobile fs-5 pb-3"></i>
+                  <p><a href="">+91 999-999-9999</a></p>
+                </li>
+                <li class="d-flex align-items-center">
+                  <i class="pe-5 fa-solid fa-envelope fs-5 pb-3"></i>
+                  <p><a href="">Info@foodiee.in</a></p>
+                </li>
+              </ul>
+            </div>
+            <!-- Contact Details -->
+            <div class="contact-us col-lg-7 col-md-7">
+              <form>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="name" id="name" placeholder="Your name">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input type="email" class="form-control" name="name" id="name" placeholder="Email address">
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input class="textarea" name="message" id="message" placeholder="Enter your message">
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <button class="main-btn">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Footer starts -->
+    <footer id="footer">
+      <div class="footer py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h1>Foodiee</h1>
+            </div>
+            <div class="col-md-12 text-center text-content">
+              <p>Made with <i class="fa-solid fa-heart"></i> for food lovers everywhere.</p>
+            </div>
+            <div class="col-md-12 footer-social pt-4 text-center">
+              <a href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.twitter.com" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.youtube.com" target="_blank">
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a href="https://www.instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+            <div class="col-md-12">
+              <div class="footer-copy">
+                <div class="copy-right text-center pt-5">
+                  <p class="text-light">@ 2025. Foodiee. All rights reserved.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS CDN -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Own JS Link -->
+    <script src="js/script.js"></script>
+</body>
+</html>

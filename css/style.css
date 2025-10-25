@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Merienda:wght@300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*,
+*:after,
+*:before{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:active,
+:hover,
+:focus{
+    outline: 0 !important;
+    outline-offset: 0;
+}
+a,
+a:hover{
+    text-decoration: none;
+}
+a:hover{
+    color: var(--primary-color) !important;
+}
+ul,
+ol{
+    margin: 0;
+    padding: 0;
+}
+/* ======== Variable Define ======== */
+:root{
+    --primary-color: #921A40;
+    --secondary-color: #43121d;
+    --yellow-color: #FFD93D;
+    --white-color: #fff;
+    --text-color: #555;
+    --text-grey: #999;
+    --black-color: #000;
+    --primary-font: "Poppins", sans-serif;
+    --heading-font: "Quicksand", sans-serif;
+    --secondary-font: "Quicksand", sans-serif;
+    --bg-light-white: #f5f5f5;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: var(--primary-font);
+    font-size: 100%;
+    font-weight: 400;
+}
+/* 
+==========================
+    Custom ScrollBar 
+==========================
+*/
+::-webkit-scrollbar{
+    width: 0.625rem;
+}
+::-webkit-scrollbar-track{
+    background: var(--white-color);
+}
+::-webkit-scrollbar-thumb{
+    background: var(--primary-color);
+}
+/* 
+==========================
+    Custom CSS Design 
+==========================
+*/
+h1{
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    color: var(--secondary-color);
+    font-family: var(--heading-font);
+}
+h2{
+    font-weight: 800;
+    font-size: 2.825rem;
+    text-transform: capitalize;
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
+    line-height: 3rem;
+}
+h4{
+    font-weight: 500;
+    font-size: 1.385rem;
+    font-family: var(--primary-font);
+    color: var(--secondary-color);
+}
+p{
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: 1px;
+}
+.main-btn{
+    display: inline-block;
+    padding: 0.625rem 1.875rem;
+    line-height: 1.5625rem;
+    background-color: var(--primary-color);
+    border: 0.1875rem solid var(--primary-color);
+    color: var(--white-color);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+}
+.main-btn:hover{
+    background-color: transparent;
+    color: var(--primary-color);
+}
+.wrapper{
+    padding-top: 8.25rem;
+    padding-bottom: 8.25rem;
+}
+.text-content{
+    width: 70%;
+    margin: auto;
+}
+.counter-section h2,
+.testimonial-section h2,
+.book-food-text h2{
+    color: var(--white-color);
+}
+.headline h2::before{
+    content: '';
+    width: 30%;
+    height: 0.225rem;
+    background-color: var(--secondary-color);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.625rem;
+}
+/* 
+==========================
+    Header Design 
+==========================
+*/
+.navigation-wrap{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.navigation-wrap .logo{
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-family: "Merienda", cursive;
+    color: var(--primary-color);
+}
+.navigation-wrap .nav-item{
+    padding: 0 0.625rem;
+    transition: all 200ms linear;
+}
+.navbar-toggler:focus{
+    outline: unset;
+    border: unset;
+    box-shadow: none;
+}
+.nav-link{
+    position: relative;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+}
+.nav-link.active::before{
+    content: '';
+    width: 50%;
+    height: 0.125rem;
+    background-color: var(--secondary-color);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0.625rem;
+}
+.navigation-wrap .main-btn{
+    padding: 0.3125rem 1.4375rem;
+    box-shadow: none;
+    margin-left: 0.625rem;
+}
+/* Change navbar styling on scroll */
+.navigation-wrap.scroll-on{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--white-color);
+    box-shadow: 0 0.125rem 1.75rem 0 rgb(0,0,0,0.09);
+    transition: all 0.15s ease-in-out 0s;
+}
+/* 
+==========================
+    top-banner Design 
+==========================
+*/
+.top-banner{
+    width: 100%;
+    background: url(../images/bg-1.jpg) no-repeat center;
+    background-size: cover;
+    padding: 16.875rem 0 9.375rem;
+}
+/* 
+==========================
+   food-blog section Design 
+==========================
+*/
+.food-blog{
+    background-image: linear-gradient(var(--bg-light-white), var(--white-color), var(--bg-light-white))
+}
+.food-blog .search-bar {
+  margin-bottom: 20px;
+}
+.food-blog .search-bar input {
+  padding: 10px 15px;
+  width: 280px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  font-size: 16px;
+}
+.food-blog .search-bar button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  background-color: var(--primary-color); 
+  color: #fff;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.food-blog .search-bar button:hover {
+  background-color: #a32a4a;
+}
+.food-blog .categories-btn{
+    padding: 0.325rem 1.875rem;
+    line-height: 25px;
+    background: linear-gradient(125deg, rgb(39, 38, 38), var(--primary-color));
+    border: 0.1875rem solid var(--white-color);
+    border-radius: 0.3rem;
+    color: var(--white-color);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+}
+.food-blog .categories-btn:hover{
+    background: transparent;
+    color: var(--primary-color);
+    border: 0.1875rem solid var(--primary-color);
+}
+.food-blog .card{
+    border: none;
+    background-color: transparent;
+    border-radius: 0.937rem;
+    margin-top: 3rem;
+}
+.food-blog .card .image-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 17rem;
+}
+.food-blog .card .image-container img{
+    border-radius: 0.335rem;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.food-blog .label{
+    position: absolute;
+    top: -0.625rem;
+    left: 1rem;
+    z-index: 99;
+    background: var(--white-color);
+    border-radius: 0.2rem;
+    color: var(--secondary-color);
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: var(--secondary-font);
+    box-shadow: 0 0 10px rgba(0,0, 0, 0.7);
+    z-index: 1;
+}
+.food-blog .card .food-para{
+    font-size: 0.9rem;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 1.825rem;
+    letter-spacing: 1px;
+    text-align: left;
+}
+.food-blog .card time{
+    font-size: 1rem;
+    color: var(--black-color);
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: 1px;
+}
+.food-blog .card i{
+    color: var(--secondary-color);
+}
+.food-blog .card .profile .profile-img{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid var(--primary-color);
+}
+.food-blog .card .profile .profile-name{
+    font-size: 0.956rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+.food-blog .card .main-btn{
+    border-radius: 0.3rem;
+    border: 0.08rem solid var(--primary-color);
+}
+/* recipe modal */
+#recipeImage {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+#recipeModal h4, 
+#recipeModal h6 {
+  font-weight: 600;
+  margin-top: 15px;
+  color: var(--primary-color); 
+}
+#recipeModal ul li,
+#recipeModal ol li {
+  margin-bottom: 6px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+.modal-body {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 20px;
+}
+.ingredients-box,
+.instructions-box {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 15px 5px 5px 30px;
+  margin-top: 15px;
+}
+.modal-content {
+  animation: popup 0.3s ease-in-out;
+}
+@keyframes popup {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.modal-img{
+    border-radius: 0.335rem;
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+}
+#recipeIngredients,
+#recipeInstructions {
+  padding-left: 40px;  
+  margin: 10px 0;
+}
+#recipeIngredients li,
+#recipeInstructions li {
+  background: #fff;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  font-size: 15px;
+}
+/* 
+==========================
+   About section Design 
+==========================
+*/
+.about .collage-flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.3rem;
+    margin-bottom: 0;
+    margin-top: 4rem;
+}
+.about .collage-flex img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about .collage-flex .left-img{
+    flex: 1;
+    padding: 0.6rem 0;
+}
+.about .collage-flex .middle-img{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.about .collage-flex .middle-top, .about .collage-flex .middle-bottom{
+    flex: 1;
+}
+.about .collage-flex .right-img{
+    flex: 1;
+    padding: 0.6rem 0;
+}
+/* 
+==========================
+   contact section Design 
+==========================
+*/
+.contact{
+    background-color: var(--bg-light-white);
+}
+.contact .info li p a{
+    font-size: 1rem;
+    display: inline-block;
+    margin: 0.60rem 0;
+    color: var(--black-color);
+}
+.contact h3{
+    font-weight: 700;
+    font-size: 1.725rem;
+    text-transform: capitalize;
+    font-family: var(--secondary-font);
+    color: var(--black-color);
+    line-height: 3rem;
+}
+.contact .form-group{
+    margin-bottom: 1.5rem;
+}
+.contact .form-group .form-control{
+    height: 3.75rem;
+    padding: 0.375rem 1.185rem;
+    border: none;
+    font-size: 1rem;
+    box-shadow: 0 0.1875rem 1.25rem 0 rgb(0 0 0 / 12%);
+}
+.contact .form-group .textarea{
+    width: 100%;
+    height: 3.75rem;
+    border-radius: 0.25rem;
+    padding: 0.375rem 1.185rem;
+    border: none;
+    font-size: 1rem;
+    margin-top: 0.3125rem;
+    box-shadow: 0 0.1875rem 1.25rem 0 rgb(0 0 0 / 12%);
+}
+/* 
+==========================
+   footer section Design 
+==========================
+*/
+.footer{
+    background-color: var(--primary-color);
+}
+.footer h1{
+    color: var(--white-color);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    font-family: "Merienda", cursive;
+}
+.footer p{
+    color: var(--white-color);
+    padding: 0 2rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: 0.3px;
+}
+.footer .footer-social a i{
+    font-size: 1.5rem;
+    color: var(--white-color);
+    padding: 0 2rem;
+}

@@ -1,0 +1,95 @@
+/* 
+==========================
+   Media max-width 991px
+==========================
+*/
+@media (max-width: 991px){
+/* custom classes */
+.text-content{
+    width: 100%;
+}
+h1{
+    font-size: 2.6rem;
+}
+p{
+    font-size: .88rem;
+}
+.main-btn, .white-btn{
+    font-size: 0.885rem;
+}
+/* navbar brand */
+.navigation-wrap .logo{
+    font-size: 2rem;
+}
+.navigation-wrap{
+    text-align: center;
+    background-color: var(--white-color);
+}
+.navigation-wrap .nav-link{
+    line-height: 1.875rem;
+}
+/* Banner design */
+.top-banner{
+    padding: 9.375rem 0 9.375rem;
+} 
+/* Contact */
+.contact .info li p a{
+    font-size: 0.9rem;
+}
+.contact .textarea, .contact .form-control{
+    font-size: 0.9rem;
+}
+/* footer link */
+.footer h2{
+    font-size: 2rem;
+}
+.footer p{
+    font-size: 0.8rem;
+}
+.footer .footer-social a i{
+    font-size: 1.3rem;
+    padding: 0 1.5rem;
+}
+}
+/* 
+==========================
+   Media max-width 767px
+==========================
+*/
+@media(max-width: 767px){
+/* custom css */
+h1{
+    font-size: 2.4rem;
+}
+h2{
+    font-size: 2.425rem;
+    line-height: 2.0625rem;
+}
+ /* top banner */
+.top-banner{
+    padding: 10.875rem 0 9.375rem;
+}
+.newsletter .main-btn{
+    width: 100%;
+    margin-top: 1rem;
+}
+/* Contact */
+.contact .contact-us{
+    margin-top: 1rem;
+}
+/* footer link */
+.footer .footer-link,
+.footer a i{
+    padding: 0 0.7rem;
+}
+.modal-content {
+    width: 95%;
+    padding: 15px;
+  }
+  .comment-form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+
