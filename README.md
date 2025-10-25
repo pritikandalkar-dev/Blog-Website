@@ -170,5 +170,5 @@ PROJECT1_BLOGWEBSITE
 - Priti Kandalkar
 - Front-End React Developer
 
-## 💻 Connect with me
+## Connect with me
 🌟 [GitHub Profile](https://github.com/pritikandalkar-dev)
