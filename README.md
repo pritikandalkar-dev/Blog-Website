@@ -1,9 +1,9 @@
-# Foodiee – Recipe Blog Website
+#  🍽️ Foodiee – Recipe Blog Website
 
 **Foodiee** is a user-friendly recipe blog website for food enthusiasts to discover & view recipes. Users can click to view full recipes, add their own comments using local storage. Built with HTML, CSS, JavaScript, and Bootstrap 5, it offers a responsive, modern interface with smooth navigation, Google Fonts (Quicksand & Poppins), and Font Awesome icons.
 
 
-## Features
+## ✨ Features
 
 1. Recipe Cards: Display name, image, cooking time, servings, and date. 
 
@@ -26,13 +26,18 @@
 10. Modern UI: Integrated Google Fonts (Quicksand & Poppins) and Font Awesome icons for a professional look.
 
 
-## Tech Stack
+##  🧰 Tech Stack
 
-HTML, CSS, JavaScript, Bootstrap 5, Local Storage, Font Awesome
+- HTML
+- CSS
+- JavaScript
+- Bootstrap 5
+- Local Storage
+- Font Awesome
 
-## Lessons Learned
+##  🎓 Lessons Learned
 
-#### What I Learned
+####  💡 What I Learned
 
 While building Foodiee, I learned:
 
@@ -48,7 +53,7 @@ While building Foodiee, I learned:
 
 - Adding scroll navigation with active link highlighting for better user experience.
 
-#### Challenges and How I Overcame Them
+#### ⚙️ Challenges and How I Overcame Them
 
 1. Challenge: Storing and displaying user comments dynamically.
 Solution: Learned how to structure objects in local storage and update the DOM when a new comment is added.
@@ -63,8 +68,8 @@ Solution: Used JavaScript event delegation and modular functions to handle click
 Solution: Utilized local storage to save favorites and comments so data remains even after page reload.
 
 
-## About Sections
-#### 1. Home
+##  🏠 About Sections
+####  🏡 Home
 
 - Welcoming landing page introducing Foodiee.
 
@@ -72,7 +77,7 @@ Solution: Utilized local storage to save favorites and comments so data remains 
 
 - Smooth scrolling navigation with active link highlighting.
 
-#### 2. Blog
+####  📝 Blog
 
 - Users can read, browse, and comment on blog posts.
 
@@ -86,19 +91,19 @@ Solution: Utilized local storage to save favorites and comments so data remains 
 
 - Mobile-friendly design for easy reading on all devices.
 
-#### 3. About
+#### ℹ️ About
 
 - Explains the purpose of Foodiee and its features.
 
 - Highlights the user-friendly interface and responsive design.
 
-#### 4. Contact
+#### 📩 Contact
 
 - Allows users to reach out via a contact form.
 
 - Simple, responsive design for easy communication.
 
-#### 5. Footer
+#### ⚡ Footer
 
 - Displays social media icons (using Font Awesome) to connect with users.
 
@@ -109,7 +114,7 @@ Solution: Utilized local storage to save favorites and comments so data remains 
 - Clean, responsive design that fits well on all devices.
 
 
-## Folder Structure
+##  📂 Folder Structure
 
 PROJECT1_BLOGWEBSITE
 ``` 
@@ -158,17 +163,25 @@ PROJECT1_BLOGWEBSITE
 └── README.md
 ```
 
-## How to Run
+## 🚀 How to Run
 
 1. Clone or download this project.
 2. Open the project folder in a code editor like VS Code.
 3. Open `index.html` in a browser.
 4. Ensure images are in the correct folder as listed above.
 
-## Authors
+##  👩‍💻 Author
 
 - Priti Kandalkar
 - Front-End React Developer
 
-## Connect with me
-🌟 [GitHub Profile](https://github.com/pritikandalkar-dev)
+## 🌐 Connect with me
+
+🔗 GitHub Repository:
+https://github.com/pritikandalkar-dev/Project1_BlogWebsite
+
+🌍 Live Website (GitHub Pages):
+https://pritikandalkar-dev.github.io/Project1_BlogWebsite/
+
+🌟 GitHub Profile:
+https://github.com/pritikandalkar-dev
