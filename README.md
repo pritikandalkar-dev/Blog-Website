@@ -177,11 +177,14 @@ PROJECT1_BLOGWEBSITE
 
 ## 🌐 Connect with me
 
-🔗 GitHub Repository:
-https://github.com/pritikandalkar-dev/Project1_BlogWebsite
+🔗 LinkedIn: 
+priti-kandalkar-6032b9213
 
-🌍 Live Website (GitHub Pages):
+📁 GitHub Repository:
+https://github.com/pritikandalkar-dev/Blog-Website
+
+🌐 Live Website (GitHub Pages):
 https://pritikandalkar-dev.github.io/Blog-Website/
 
-🌟 GitHub Profile:
+👩‍💻 GitHub Profile:
 https://github.com/pritikandalkar-dev
