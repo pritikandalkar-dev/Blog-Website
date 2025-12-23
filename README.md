@@ -178,7 +178,7 @@ PROJECT1_BLOGWEBSITE
 ## 🌐 Connect with me
 
 🔗 LinkedIn: 
-priti-kandalkar-6032b9213
+www.linkedin.com/in/priti-kandalkar-6032b9213
 
 📁 GitHub Repository:
 https://github.com/pritikandalkar-dev/Blog-Website
