@@ -181,7 +181,7 @@ PROJECT1_BLOGWEBSITE
 https://github.com/pritikandalkar-dev/Project1_BlogWebsite
 
 🌍 Live Website (GitHub Pages):
-https://pritikandalkar-dev.github.io/Project1_BlogWebsite/
+https://pritikandalkar-dev.github.io/Blog-Website/
 
 🌟 GitHub Profile:
 https://github.com/pritikandalkar-dev
